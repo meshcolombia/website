@@ -4,6 +4,8 @@ import starlight from "@astrojs/starlight";
 import starlightVideos from "starlight-videos";
 import starlightScrollToTop from "starlight-scroll-to-top";
 
+const googleAnalyticsId = "G-D7841K0XX3";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://meshcolombia.co",
@@ -22,6 +24,21 @@ export default defineConfig({
             href: "/favicon.ico",
             sizes: "32x32",
           },
+        },
+        {
+          tag: "script",
+          attrs: {
+            src: `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`,
+          },
+        },
+        {
+          tag: "script",
+          content: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${googleAnalyticsId}');
+          `,
         },
       ],
       customCss: ["./src/styles/custom.css"],
