@@ -1,6 +1,6 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Introducción
+description: Acerca del la red Meshtastic en Colombia
 ---
 
 Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.

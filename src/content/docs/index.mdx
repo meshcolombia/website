@@ -1,36 +1,41 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Bienvenid@ a Meshtastic Colombia
+description: Repositorio de documentación de la red Meshtastic en Colombia.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Esta es la página de la comunidad donde encontrarás documentación y recursos de la red Meshtastic en Colombia.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/logo-meshtastic-colombia.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Leer más
+      link: /comunidad/introduccion
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import Footer from '../../components/Footer.astro';
 
-## Next steps
+<p>
+Este sitio web es un proyecto comunitario creado por voluntarios de la comunidad de Meshtastic en Colombia. Su objetivo es proporcionar documentación, guías y recursos para ayudar a los usuarios a comprender y utilizar la red Meshtastic en Colombia de manera efectiva.
+</p>
+
+<p class="under-construction-message">El sitio se encuentra en construcción y se actualizará continuamente con nueva información y recursos. Puede que algunos enlaces aún no estén disponibles.</p>
+
+## Inicio rápido
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Acerca del Meshtastic" icon="open-book">
+		¿Qué es Meshtastic? ¿Cómo funciona? ¿Qué dispositivos son compatibles? Encuentra las respuestas a estas preguntas en nuestra [guía de inicio rápido](/guias/introduccion/).
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Dispositivos" icon="laptop">
+		Descubre los dispositivos compatibles con Meshtastic y cómo configurarlos. Visita nuestra sección de [dispositivos](/guias/dispositivos/).
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="Mapa de nodos" icon="magnifier">
+		Explora el [mapa de nodos](https://mapa.meshcolombia.com) para ver la cobertura y los nodos activos en Colombia.
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Participa y contribuye" icon="star">
+		Únete a nuestra comunidad en [WhatsApp](https://chat.whatsapp.com/Bkw5MiV8RqVL6GRutNyZNS?mode=ac_c) para compartir experiencias, hacer preguntas y colaborar con otros usuarios de Meshtastic en Colombia.
 	</Card>
 </CardGrid>
+
+<Footer/>

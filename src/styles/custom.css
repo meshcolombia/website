@@ -1,0 +1,50 @@
+/* Dark mode colors. */
+:root {
+  --sl-color-accent-low: #205331;
+  --sl-color-accent: #a9fac0;
+  --sl-color-accent-high: #67ea94;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #ecedf5;
+  --sl-color-gray-2: #c0c1cb;
+  --sl-color-gray-3: #888a9c;
+  --sl-color-gray-4: #555767;
+  --sl-color-gray-5: #363746;
+  --sl-color-gray-6: #242526;
+  --sl-color-black: #1b1b1d;
+}
+/* Light mode colors. */
+:root[data-theme="light"] {
+  --sl-color-accent-low: #67ea94;
+  --sl-color-accent: #3a8b56;
+  --sl-color-accent-high: #205331;
+  --sl-color-white: #1b1b1d;
+  --sl-color-gray-1: #242526;
+  --sl-color-gray-2: #363746;
+  --sl-color-gray-3: #555767;
+  --sl-color-gray-4: #888a9c;
+  --sl-color-gray-5: #c0c1cb;
+  --sl-color-gray-6: #ecedf5;
+  --sl-color-gray-7: #f5f6fa;
+  --sl-color-black: #ffffff;
+}
+
+.under-construction-message {
+  padding: 1rem;
+  border: 1px solid var(--sl-color-gray-5);
+  background-color: var(--sl-color-gray-7);
+  font-size: 0.85rem;
+  color: var(--sl-color-gray-3);
+}
+
+.hr-separator {
+  border: none;
+  border-top: 1px solid var(--sl-color-gray-5);
+  margin: 2rem 0;
+}
+
+.copyright-text {
+  font-size: 0.75rem;
+  color: var(--sl-color-gray-3);
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
