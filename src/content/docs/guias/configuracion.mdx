@@ -1,0 +1,75 @@
+---
+title: Configuración
+description: Guía de configuración de dispositivos de la red Meshtastic en Colombia
+---
+
+A continuación encontrarás una guía para configurar tu dispositivo Meshtastic y unirte a la red en Colombia. Esta guía incluye los ajustes recomendados y los pasos necesarios para comenzar.
+
+## Requisitos previos
+- Un dispositivo compatible con Meshtastic (como un T-Beam, Lora32, etc.) previamente [flasheado con el firmware de Meshtastic](https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/).
+- La [aplicación Meshtastic](https://meshtastic.org/docs/getting-started/initial-config/#supported-clients-per-connection-type) instalada (disponible para Android e iOS, Web)
+- El dispositivo debe estar conectado a la aplicación Meshtastic en tu teléfono a través de Bluetooth, WiFI o USB.
+
+## Ajustes recomendados
+
+A continuación se detallan los ajustes recomendados para la configuración de tu dispositivo Meshtastic en Colombia. Estos ajustes están diseñados para optimizar el rendimiento y la conectividad de tu dispositivo en la red.
+
+### Sección: Configuración de radio (Radio Configuration)
+
+--- 
+
+#### Canales (Channels)
+Configura el canal primario `PRIMARY` o `LongFast` con los siguientes parámetros:
+
+_En los siguientes valores, FALSE o TRUE se refieren a si el parámetro está habilitado o no._
+
+| Parámetro | Valor recomendado | Notas |
+|-----------|-------------------|-------------|
+| PSK | `AQ==` | |
+| Downlink Enabled | `FALSE` | |
+| Uplink Enabled | `FALSE` | |
+| Position Enabled | `TRUE` | **TRUE**: si quieres compartir la ubicación de tu dispositivo, **FALSE**: si no deseas compartirla |
+| Position Precision | `14` | Precisión de la posición, puedes ajustarla a tu necesidad |
+
+#### Dispositivo (Device)
+| Parámetro | Valor recomendado | Notas |
+|-----------|-------------------|-------------|
+| Role | `CLIENT` | |
+| Rebroadcast Mode | `ALL` | |
+| POSIX Timezone | `<-05>5` | Zona horaria de Colombia |
+
+#### Pantalla (Display)
+| Parámetro | Valor recomendado | Notas |
+|-----------|-------------------|-------------|
+| Auto Carousel Interval | `5` | |
+
+#### LoRa
+| Parámetro | Valor recomendado | Notas |
+|-----------|-------------------|-------------|
+| Region | `ANX` | **ANZ**: Australia / Nueva Zelanda. En algunos dispositivos puede aparecer como `Slot: 20` |
+| OK to MQTT | `TRUE` | |
+
+#### Red (Network)
+| Parámetro | Valor recomendado | Notas |
+|-----------|-------------------|-------------|
+| NTP Server | `meshtastic.pool.ntp.org` | Otros servidores de hora alternos que puedes usar son: `0.pool.ntp.org` o `time.google.com` |
+
+---
+
+### Sección: Configuración de módulo (Module Configuration)
+
+#### MQTT
+| Parámetro | Valor recomendado | Notas |
+|-----------|-------------------|-------------|
+| Enabled | `TRUE` | **TRUE**: Si quieres enviar y recibir mensajes de dispositivos fuera de tu alcance de radio LoRa |
+| Server Address | `mqtt.meshtastic.org` | |
+| Username | `meshdev` | |
+| Password | `large4cats` | |
+| Encryption Enabled | `TRUE` | |
+| JSON Enabled | `FALSE` | |
+| TLS Enabled | `FALSE` | |
+| Root Topic | `msh/CO` | |
+| Client Proxy Enabled | `FALSE` | **TRUE**: Si quieres compartir el internet de tu celular o computador con tu dispositivo Meshtastic |
+| Map Reporting Enabled | `TRUE` | **TRUE**: si quieres compartir la ubicación de tu dispositivo, **FALSE**: si no deseas compartirla |
+| Map Report Position Precision | `TRUE` | Precisión de la posición, puedes ajustarla a tu necesidad. A mayor presición, mas exacta será tu ubicación en el mapa. Ten en cuenta que está información será pública. Ajustala de acuerdo a tus preferencias |
+| Map Report Publish Interval | `3600` | Valor en segundos. Puedes disminutir o aumentar este tiempo de acuerdo a tus preferencias |
