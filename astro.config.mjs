@@ -11,6 +11,17 @@ export default defineConfig({
 			logo: {
 				src: './src/assets/logo-meshtastic-colombia-100x100.webp',
 			},
+			favicon: '/favicon.ico',
+			head: [
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'icon',
+						href: '/favicon.ico',
+						sizes: '32x32',
+					},
+				},
+			],
 			customCss: [
 				'./src/styles/custom.css',
 			],
