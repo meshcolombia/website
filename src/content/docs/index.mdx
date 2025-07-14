@@ -12,29 +12,31 @@ hero:
       icon: right-arrow
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, Aside } from '@astrojs/starlight/components';
 import Footer from '../../components/Footer.astro';
 
 <p>
 Este sitio web es un proyecto comunitario creado por voluntarios de la comunidad de Meshtastic en Colombia. Su objetivo es proporcionar documentación, guías y recursos para ayudar a los usuarios a comprender y utilizar la red Meshtastic en Colombia de manera efectiva.
 </p>
 
-<p class="under-construction-message">El sitio se encuentra en construcción y se actualizará continuamente con nueva información y recursos. Puede que algunos enlaces aún no estén disponibles.</p>
+<Aside title="Ten presente..." type="caution">El sitio se encuentra en construcción y se actualizará continuamente con nueva información y recursos aportados por nuestra comunidad. Puede que algunos enlaces aún no estén disponibles, agradecemos tu paciencia.</Aside>
+
+
 
 ## Inicio rápido
 
-<CardGrid stagger>
+<CardGrid>
 	<Card title="Acerca del Meshtastic" icon="open-book">
-		¿Qué es Meshtastic? ¿Cómo funciona? ¿Qué dispositivos son compatibles? Encuentra las respuestas a estas preguntas en nuestra [guía de inicio rápido](/guias/introduccion/).
+		¿Qué es Meshtastic? ¿Cómo funciona? ¿Qué dispositivos son compatibles? Encuentra las respuestas a estas preguntas en nuestra [guía de inicio](/guias/introduccion/).
 	</Card>
-	<Card title="Dispositivos" icon="laptop">
-		Descubre los dispositivos compatibles con Meshtastic y cómo configurarlos. Visita nuestra sección de [dispositivos](/guias/dispositivos/).
+	<Card title="Configuración" icon="laptop">
+		Consulta nuestra [guía de configuración](/guias/configuracion/) para aprender a configurar tu dispositivo Meshtastic y unirte a la red en Colombia. Incluye ajustes recomendados y pasos para comenzar.
 	</Card>
 	<Card title="Mapa de nodos" icon="magnifier">
-		Explora el [mapa de nodos](https://mapa.meshcolombia.com) para ver la cobertura y los nodos activos en Colombia.
+		Explora el [mapa de nodos](https://meshmap.net) para ver la cobertura y los nodos activos en Colombia.
 	</Card>
 	<Card title="Participa y contribuye" icon="star">
-		Únete a nuestra comunidad en [WhatsApp](https://chat.whatsapp.com/Bkw5MiV8RqVL6GRutNyZNS?mode=ac_c) para compartir experiencias, hacer preguntas y colaborar con otros usuarios de Meshtastic en Colombia.
+		Únete a nuestra comunidad y [contribuye](/comunidad/contribucion/) al proyecto. Puedes ayudar creando contenido, reportando errores o sugiriendo mejoras.
 	</Card>
 </CardGrid>
 
