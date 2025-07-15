@@ -1,0 +1,27 @@
+---
+title: Configuración de módulo
+description: Ajustes recomendados para la configuración del módulo en dispositivos Meshtastic en Colombia
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Existen varias secciones en la configuración del módulo de tu dispositivo Meshtastic. A continuación, se detallan los ajustes de cada sección.
+
+<Aside title="En construcción..." type="caution">Próximamente tendremos cada una de las secciones explicadas para que puedas configurarlas según tus necesidades. ¿Te gustaría ayudarnos a completarlas? [Contribuye aquí](/comunidad/contribucion/)</Aside>
+
+|Sección|Ajustes disponibles|
+|-------------------|------------|
+|Iluminación ambiental|Ajusta el brillo de los LED RGB I2C NCP5623.|
+|Audio|Habilita la compatibilidad con comunicaciones de voz Codec2 en ciertos dispositivos.|
+|Mensajes predefinidos|Configura una serie de mensajes predefinidos para enviar directamente desde el dispositivo mediante un dispositivo de entrada, como un codificador rotatorio.|
+|Sensor de detección|Configura un pin GPIO para que se monitoree su estado alto/bajo y envíe alertas de texto.|
+|Notificación externa|Los mensajes entrantes pueden alertarte mediante circuitos que conectas al dispositivo (LED, zumbadores, etc.).|
+|MQTT|Reenvía paquetes a un servidor MQTT. Esto permite que los usuarios de la malla local se comuniquen con los usuarios de otra malla a través de internet.|
+|Información de vecinos|Envía información sobre vecinos de salto cero a la malla.|
+|Contador de pasajeros|Cuenta el número de dispositivos BLE y Wi-Fi que pasan por un nodo.|
+|Prueba de alcance|Envía mensajes con la ubicación GPS a intervalos para comprobar la distancia a la que se pueden comunicar tus dispositivos. Requiere (al menos) un dispositivo configurado como emisor y otro como receptor. El receptor o receptores registrarán todos los mensajes entrantes en un archivo CSV.|
+|Hardware remoto|Configura y lee el estado de GPIO de forma remota a través de la malla.|
+|Módulo serial|Envía mensajes a través de la malla mediante cadenas de texto a través de un puerto serie.|
+|Almacenamiento y reenvío|Almacena los mensajes en un dispositivo para su entrega después de que los clientes desconectados se reincorporen a la malla.|
+|Telemetría|Conecta sensores al dispositivo y transmite lecturas a intervalos regulares a la malla.|
+|Traceroute|Rastrea qué nodos se utilizan para enviar un mensaje a un destino específico.|

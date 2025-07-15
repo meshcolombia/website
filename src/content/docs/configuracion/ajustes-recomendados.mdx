@@ -1,0 +1,35 @@
+---
+title: Ajustes recomendados
+description: Ajustes recomendados para la configuración de dispositivos Meshtastic en Colombia
+---
+
+import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+
+A continuación se detallan los ajustes recomendados para la configuración de tu dispositivo Meshtastic en Colombia. Estos ajustes están diseñados para optimizar el rendimiento y la conectividad de tu dispositivo en la red.
+
+|Parametro|Valor|
+|---|---|
+|Región|`ANZ` (Australia / Nueva Zelanda) ó `Slot: 20`|
+|Zona horaria|`<-05>5` (Colombia)|
+|MQTT|`mqtt.meshtastic.org`|
+|MQTT Usuario|`meshdev`|
+|MQTT Contraseña|`large4cats`|
+|MQTT Root Topic|`msh/CO`|
+
+<Aside title="Ten presente..." type="tip">Los ajustes de región están basados en la normatividad vigente y recomendaciones dadas por la ANE (Agencia Nacional del Espectro), entidad encargada de la planeación, atribución, vigilancia y control del espectro radioeléctrico en Colombia. [Conoce más acerca de estas regulaciones](/recursos/regulacion/).</Aside>
+
+## Guías de configuración
+
+Encuentra a continuación las guías de configuración detalladas para cada sección de tu dispositivo Meshtastic:
+
+<LinkCard
+title="Configuración de radio"
+description="Ajustes recomendados para la configuración de radio"
+href="/configuracion/radio"
+/>
+
+<LinkCard
+title="Configuración de módulo"
+description="Ajustes recomendados para la configuración de radio"
+href="/configuracion/modulo"
+/>

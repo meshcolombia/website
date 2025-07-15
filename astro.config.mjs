@@ -70,13 +70,40 @@ export default defineConfig({
           items: [
             { label: "Introducción", slug: "comunidad/introduccion" },
             { label: "Contribución", slug: "comunidad/contribucion" },
-            // { label: 'Preguntas Frecuentes', slug: 'comunidad/preguntas-frecuentes' },
           ],
         },
         {
-          label: "Guías",
-          autogenerate: { directory: "guias" },
+          label: "Configuración",
+          items: [
+            {
+              label: "Ajustes recomendados",
+              slug: "configuracion/ajustes-recomendados",
+              badge: { text: "✅", variant: "success" },
+            },
+            {
+              label: "Radio",
+              items: [
+                {
+                  label: "Todos los ajustes de radio",
+                  slug: "configuracion/radio",
+                },
+              ],
+            },
+            {
+              label: "Módulo",
+              items: [
+                {
+                  label: "Todos los ajustes de módulo",
+                  slug: "configuracion/modulo",
+                },
+              ],
+            },
+          ],
         },
+        // {
+        //   label: "Guías",
+        //   autogenerate: { directory: "guias" },
+        // },
         {
           label: "Recursos",
           items: [
