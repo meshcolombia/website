@@ -76,8 +76,8 @@ export default defineConfig({
           label: "Configuración",
           items: [
             {
-              label: "Ajustes recomendados",
-              slug: "configuracion/ajustes-recomendados",
+              label: "Configuración de nodos",
+              slug: "configuracion/configuracion-nodos",
               badge: { text: "✅", variant: "success" },
             },
             {
