@@ -1,0 +1,54 @@
+---
+title: Configuración de MQTT para tu nodo
+description: Guía para configurar MQTT en tu nodo de Meshtastic Colombia.
+sidebar:
+  label: Configuración de MQTT
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+## ¿Qué es MQTT?
+
+MQTT es la sigla de **Message Queuing Telemetry Transport** o Transporte de Telemetría por Cola de Mensajes. Es un protocolo integrado en Meshtastic que permite a los nodos retransmitir mensajes a través de internet. Esto permite que los nodos conecten donde físicamente no podrían.
+
+## Configuración de MQTT
+
+Habilitar MQTT te permitirá aparecer en [Global MeshMap](https://meshmap.net/), [Liam Cottle MeshMap](https://meshtastic.liamcottle.net/), entre otros.
+
+1. Ve a la sección de configuración de MQTT y habilitalo.
+2. Usa `mqtt.meshtastic.org` como servidor MQTT.
+3. Usa `meshdev` como nombre de usuario MQTT.
+4. Usa `large4cats` como contraseña MQTT.
+
+    _WIP: IMAGEN DE EJEMPLO DE CONFIGURACIÓN_
+
+5. Habilita la encriptación de MQTT.
+6. Asegúrate de que JSON y TLS estén **deshabilitados**.
+7. Usa `msh/CO` como tema raíz de MQTT (MQTT Root Topic).
+
+    <Aside type="note">
+    El tema raíz de MQTT es sensible a mayúsculas y minúsculas. Asegúrate de usar `msh/CO` exactamente como se indica y no dejes espacios en blanco al inicio o al final.
+    </Aside>
+
+    <Aside type="tip">
+    El tema raíz de MQTT es el prefijo que se usa para todos los mensajes MQTT. Por ejemplo, si envías un mensaje a `msh/CO/1234567890`, el tema raíz es `msh/CO`.
+    </Aside>
+
+8. Si estás usando WiFi, deshabilita la opción `Proxy to Client Enabled`, Si estás usando un teléfono móvil, habilita la opción `Proxy to Client Enabled`.
+
+    _WIP: IMAGEN DE EJEMPLO DE CONFIGURACIÓN_
+
+9. Ve a la configuración de Canales y luego selecciona el canal primario (LongFast).
+10. Establece la llave o "Pre-shared Key" en: `AQ==`
+11. Deja el nombre del canal en blanco.
+12. Habilita el enlace de subida y deshabilita el enlace de bajada de MQTT.
+    - Esto se configura para enviar los mensajes recibidos a MQTT, pero impide que tu nodo reciba mensajes de MQTT. Obtén más información sobre esto en la [configuración opcional](#configuración-opcional).
+13. Habilita los informes de mapas (Map Reporting), configura el intervalo de publicacieon de mapas a 30 segudnos y configura la precisión de ubicación deseada.
+
+    _WIP: IMAGEN DE EJEMPLO DE CONFIGURACIÓN_
+
+## Configuración opcional
+
+1. Si usas un dispositivo móvil, asegúrate de habilitar la opción "Conectar a la malla".
+2. Puedes cambiar la configuración de enlace de subida y bajada de MQTT según tus preferencias, por ejemplo si deseas contactar con otro usuarios a través de MQTT. Estas instrucciones se crearon para el estándar que menos establecido en la comunidad.
+3. Te recomendamos tener al menos el enlace de subida habilitado en el canal principal y la posición del dispositivo habilitada para que puedas ver tu ubicación en el mapa de la malla.
