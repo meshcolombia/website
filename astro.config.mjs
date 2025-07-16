@@ -81,6 +81,11 @@ export default defineConfig({
               badge: { text: "✅", variant: "success" },
             },
             {
+              label: "Evita fallas",
+              slug: "configuracion/evita-fallas",
+              badge: { text: "⚠️", variant: "caution" },
+            },
+            {
               label: "Radio",
               items: [
                 {

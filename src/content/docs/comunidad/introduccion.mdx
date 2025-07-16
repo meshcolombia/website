@@ -3,7 +3,7 @@ title: Introducción
 description: Acerca del la red Meshtastic en Colombia
 ---
 
-import { LinkButton } from "@astrojs/starlight/components";
+import { LinkButton, Aside } from "@astrojs/starlight/components";
 
 Este sitio es un proyecto comunitario creado por voluntarios y entuciastas de la comunidad de Meshtastic en Colombia. Su objetivo es proporcionar documentación, guías y recursos para ayudar a los usuarios a comprender y utilizar la red Meshtastic en Colombia de manera fácil y efectiva.
 
@@ -25,23 +25,33 @@ _Ejemplo de topología de una red Meshtastic. Imagen: Meshtastic.org_
 - Funcionalidades de ubicación GPS opcionales
 - y mucho más...
 
-## Comenzar a usar Meshtastic en Colombia
+## ¿Qué es Meshtastic Colombia?
 
-Consulta nuestra guía de configuración que contiene todos los ajustes recomendados para unirte a la red Meshtastic Colombia
+Somos una comunidad creciente de usuarios, entusiastas y radioaficionados trabajando juntos para construir una red de comunicación robusta y confiable en Colombia. Nuestro objetivo es facilitar el acceso a la tecnología Meshtastic y promover su uso en diversas aplicaciones, desde actividades al aire libre hasta situaciones de emergencia usando dispositivos LoRa de muy bajo costo. Operan en la frecuencia de 915 MHz, que es de uso libre en Colombia, estos dispositivos están cargados con el firmware Meshtastic y se conectan automáticamente entre sí.
 
-<LinkButton href="/guias/configuration/" variant="secondary">
-  Comenzar
-</LinkButton>
+Nuestra comunidad se basa en la colaboración y el intercambio de conocimientos, y estamos comprometidos a proporcionar recursos útiles para todos los interesados en Meshtastic.
+
+Meshtastic no requiere que tengas una licencia de radioaficionado ya que opera en frecuendias de uso libre en Colombia, lo que lo hace accesible para todos, esto también significa que puede ser usada con cifrado o encriptacieon de mensajes, lo que la hace ideal para situaciones donde la privacidad y la seguridad son importantes.
+
+## ¿Cómo empezar?
+
+<Aside title="En construcción..." type="caution">Asegurate de revisar nuestra página de [errores a evitar](/configuracion/evita-fallas) para prevenir posibles fallas.</Aside>
+
+1. Adquiere un dispositivo LoRa compatible con Meshtastic. Puedes encontrar una lista de dispositivos recomendados en nuestra sección de [dispositivos compatibles](/guias/dispositivos-compatibles/).
+2. Flashea tu hardware con el firmware Meshtastic. Puedes seguir nuestra guía de [flasheo de firmware](/guias/flasheo-firmware/) para obtener instrucciones detalladas.
+3. Descarga la aplicación Meshtastic en tu teléfono móvil. Está disponible para Android e iOS.
+4. Configura tu dispositivo siguiendo nuestra guía de [configuración](/configuracion/ajustes-recomendados/).
+5. Únete a nuestra comunidad en WhatsApp para interactuar con otros usuarios, hacer preguntas y compartir tus experiencias. [Enlace grupo de WhatsApp](https://chat.whatsapp.com/Bkw5MiV8RqVL6GRutNyZNS?mode=ac_c).
 
 ## Contribuir
 
 Si deseas contribuir a esta comunidad, puedes hacerlo de varias maneras:
 
-- **Contribuyendo con contenido**: Si tienes experiencia con Meshtastic y deseas compartir guías, tutoriales o cualquier otro recurso, puedes dejar tus aportes para la comunidad.
+- **Creando nuevo contenido**: Si tienes experiencia con Meshtastic y deseas compartir guías, tutoriales o cualquier otro recurso, puedes dejar tus aportes para la comunidad.
 - **Reportando errores**: Si encuentras algún error en la documentación o en el sitio, por favor, infórmanos para que podamos corregirlo.
 - **Sugerencias**: Si tienes ideas para mejorar el contenido o la estructura del sitio, no dudes en compartirlas.
 - **Participando en la comunidad**: Únete a nuestro grupo de WhatsApp para interactuar con otros usuarios, hacer preguntas y compartir tus experiencias.
 
-<LinkButton href="/comunidad/contribuir/" variant="secondary">
+<LinkButton href="/comunidad/contribuir/">
   Contribuir
 </LinkButton>

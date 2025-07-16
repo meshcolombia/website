@@ -1,0 +1,42 @@
+---
+title: Evita fallas
+description: Consejos para evitar problemas comunes al configurar tu dispositivo Meshtastic
+---
+
+import { LinkButton, Aside } from "@astrojs/starlight/components";
+
+### **NO** enciendas tu dispositivo sin antes conectar una antena
+
+Si enciendes tu dispositivo sin una antena conectada, puedes dañar el circuito interno del dispositivo permanentemente. **Asegúrate de que siempre esté conectado a una antena antes de encenderlo**.
+
+### Evita activar el enlace de bajada MQTT (_MQTT Downlink_)
+
+Al activar el **enlace de bajada MQTT**, se inundará la red de malla local con paquetes MQTT, lo que reducirá considerablemente el rendimiento de la red. Además, se anula el propósito de una red en malla fuera de la red de internet. Esto publicará todos los mensajes enviados desde otro enlace de subida en todos los nodos, lo que los inutilizará. Mantén el enlace de subida (MQTT) habilitado únicamente en el canal principal!
+
+### Monta las antenas en posición vertical y minimiza la longitud del cable entre el nodo y la antena
+
+Lo ideal es mantener la antena en posición vertical, al nivel más alto posible. Además, pequeños ajustes, como mantener el cable que conecta la antena al nodo lo más corto posible, serán útiles. Mantener el cable vertical y sin doblar garantizará la mejor conexión posible; las antenas con bisagra suelen tener un rendimiento inferior si están dobladas.
+
+### Evita las baterías defectuosas
+
+Las [baterías 18650](https://en.wikipedia.org/wiki/18650_battery) son muy comunes en las construcciones Meshtastic por su gran capacidad y recargabilidad. Son baterías de iones de litio creadas originalmente para computadores portátiles. Muchos fabricantes falsos o engañosos venden baterías con una capacidad muy superior a la que tienen. Opta por marcas reconocidas como Samsung o Panasonic. Un indicio claro de que una batería es falsa es si pesa menos de 40 gramos.
+
+### Presta atención a los cables SMA
+
+Al comprar cables y adaptadores SMA, asegúrate de verificar el género de la antena y los cables que vas a utilizar. Los conectores no compatibles pueden causar daños permanentes a tu nodo, dejándolo posiblemente inutilizable.
+
+### Evita usar antenas Lilygo o Heltec de fábrica.
+
+Usar las antenas de fábrica de los dispositivos Lilygo y Heltec resultará en una pérdida considerable de rendimiento debido a su ROE muy alta. Cuanto menor sea la ROE, mejor. Te recomendamos consultar este [repositorio de GitHub](https://github.com/meshtastic/antenna-reports) para elegir la mejor antena para tu nodo.
+
+### Configurar un canal de administración para nodos remotos
+
+Si vas a implementar un nodo de difícil acceso, te recomendamos configurar el canal de administración (admin) para poder controlarlo a través de otro nodo de forma inalámbrica. Las instrucciones están disponibles [aquí](https://meshtastic.org/docs/configuration/remote-admin/).
+
+### No uses los roles de Enrutador (Router) o Repetidor (Repeater) sin una buena razón.
+
+Los roles de **Enrutador** (`Router`) o **Repetidor** (`Repeater`) deben reservarse para nodos con una ubicación excepcional. Los nodos con estos roles mal ubicados (o en un lugar que no requiere otro) pueden reducir el rendimiento y la fiabilidad de la malla. Si no estás completamente seguro de que tu nodo esté ubicado de forma óptima y de que no haya un `enrutador` o `repetidor` cerca, deberías usar `Client`, `Client_Mute` o solicitar una segunda opinión en el Discord oficial de Meshtastic.
+
+---
+
+_Fuente: Chicagoland Mesh_
