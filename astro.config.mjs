@@ -105,10 +105,10 @@ export default defineConfig({
             },
           ],
         },
-        // {
-        //   label: "Guías",
-        //   autogenerate: { directory: "guias" },
-        // },
+        {
+          label: "Guías",
+          autogenerate: { directory: "guias" },
+        },
         {
           label: "Recursos",
           items: [
