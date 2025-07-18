@@ -11,7 +11,7 @@ export default defineConfig({
   site: "https://meshcolombia.co",
   integrations: [
     starlight({
-      title: "Meshtastic Colombia",
+      title: "Meshtastic Colombia Community",
       logo: {
         src: "./src/assets/logo-meshtastic-colombia-100x100.webp",
       },
