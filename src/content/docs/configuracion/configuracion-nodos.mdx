@@ -39,7 +39,7 @@ import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
 
 |Parametro|Valor|
 |---|---|
-|Región|`ANZ` (Australia / Nueva Zelanda)|
+|Región|`ANZ` (Australia / Nueva Zelanda) ([¿Por qué esta región?](#por-que-usamos-anz))|
 |Slot de frecuencia|`20`|
 |Número de saltos|`7`|
 |Configuración de la onda|`LongFast`|
@@ -65,6 +65,27 @@ import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
 
 
 <Aside title="Ten presente..." type="note">Los ajustes de región están basados en la normatividad vigente y recomendaciones dadas por la ANE (Agencia Nacional del Espectro), entidad encargada de la planeación, atribución, vigilancia y control del espectro radioeléctrico en Colombia. [Conoce más acerca de estas regulaciones](/recursos/regulacion/).</Aside>
+
+## ¿Por qué usamos la región ANZ (Australia / Nueva Zelanda)?
+
+La región ANZ (Australia / Nueva Zelanda) se utiliza debido a su conformidad con las regulaciones locales y la disponibilidad de espectro para dispositivos que operan en frecuencias de uso libre. Esta región ha sido seleccionada para garantizar un rendimiento óptimo y una menor interferencia en las comunicaciones.
+
+En Colombia el rango de frecuencias de 915 MHz es el más adecuado para dispositivos Meshtastic, ya que se alinea con las normativas de la ANE.
+
+<Aside type="note" title="Tip">Si tu dispositivo no tiene la opción de seleccionar **ANZ (Australia / Nueva Zelanda)**, selecciona **Slot: 20**.</Aside>
+
+#### Comparación de las regiones más comunes para 915 MHz
+
+| Región | Descripción | Rango de frecuencias (MHz) |
+|--------|-------------| ---------------------|
+| **ANZ** | **Australia / Nueva Zelanda** | **915.0 - 928.0** |
+| US | Estados Unidos | 902.0 - 928.0 |
+| PH_915 | Filipinas | 915.0 - 918.0 |
+
+![Comparación de frecuencias por región](../../../assets/images/cuadro-comparacion-regiones.webp)
+_Comparación de frecuencias por región._
+
+Analizando las frecuencias de las regiones previamente mencionadas, se observa que la región **ANZ (Australia / Nueva Zelanda)** es la más adecuada para Colombia ya que se encuentra dentro del rango de frecuencias permitido por la ANE. En cuanto a la región **US (Estados Unidos)**, aunque comparte un rango similar, opera en un rango adicional de `902.0 a 915.0 MHz`, por lo que usaría frecuencias de uso restringido que requieren licencia. Finalmente, la región **PH_915 (Filipinas)** tiene un rango más limitado y no aprovecharía el rango entre 918.0 y 928.0 MHz.
 
 ## Guías de configuración
 
