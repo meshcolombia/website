@@ -13,7 +13,7 @@ export default defineConfig({
     starlight({
       title: "Meshtastic Colombia Community",
       logo: {
-        src: "./src/assets/logo-meshtastic-colombia-100x100.webp",
+        src: "./src/assets/logo-meshtastic-colombia-v2-100x100.webp",
       },
       favicon: "/favicon.ico",
       head: [
