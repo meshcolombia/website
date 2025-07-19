@@ -28,6 +28,12 @@
   --sl-color-black: #ffffff;
 }
 
+.hero-name {
+  color: var(--sl-color-accent);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .under-construction-message {
   padding: 1rem;
   border: 1px solid var(--sl-color-gray-5);
