@@ -106,6 +106,15 @@ export default defineConfig({
           ],
         },
         {
+          label: "Hardware",
+          items: [
+            {
+              label: "Dispositivos",
+              autogenerate: { directory: "dispositivos" },
+            }
+          ]
+        },
+        {
           label: "Guías",
           autogenerate: { directory: "guias" },
         },

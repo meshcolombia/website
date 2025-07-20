@@ -1,0 +1,234 @@
+---
+title: Dispositivos | Resumen del hardware soportado
+description: Listados de dispositivos más usados y recomendados para la red Meshtastic.
+sidebar:
+    label: Todos los dispositivos
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+# Dispositivos soportados
+
+El hardware de Meshtastic puede ser instalado en una amplia variedad de placas de desarrollo. A continuación, se presentan algunos de los modelos más usados y recomendados para la red Meshtastic.
+
+### ¿Qué modelo debería elegir?
+
+Mientras que todas las placas listadas en esta página podrían funcionar con Meshtastic y enlazarse con otras, algunas favoritas de la comunidad son:
+
+- RAK Meshtastic Start Kit: RAK19007+RAK4631
+- Seeed Card Tracker T1000-E
+- Heltec Mesh Node T114
+- Nano G2 Ultra
+- Station G2
+- LILYGO LoRa T3-S3
+
+Por favor haz tu investigación y elige el dispositivo que mejor se adapte a tus necesidades (o quizás ya lo tienes en un contenedor en algún lugar).
+
+<Aside title="Información" type="note">
+- Te recomendamos **enormemente** que selecciones dispositivos equipados con los nuevos chips de las series Semtech SX126x o LR11xx, ya que estos ofrecen un rendimiento mejorado y una mejor compabilidad que los chips de la serie SX127x.
+- Los dispositivos basados en el chips nRF52 usan menos energía que los basados en el chips ESP32, por lo que generalmente son preferidos para proyectos con energía solar o dispositivos portátiles.
+- Los dispositivos basados en ESP32 requieren más energía para operar, pero típicamente son alternativas de menor costo que funcionan bien cuando se usa energía de la casa, o para dispositivos portátiles que solo requieren uno o dos días de tiempo de uso, y para aplicaciones que requieren conectividad WiFi o más memoria RAM.
+</Aside>
+
+## RAK®
+
+### [Wisblock](./rak-wireless/wisblock/)
+
+[**Módulos Core WisBlock**](./rak-wireless/wisblock/core-module/)
+
+Sistema de hardware modular con módulos Base, Core y Periféricos, incluyendo el kit de inicio Meshtastic de bajo consumo y listo para energía solar basado en nRF52840 (19007 & 4631).
+
+Modular hardware system with Base, Core and Peripheral modules including the low-power and solar ready nRF52840-based Meshtastic Starter Kit (19007 & 4631).
+
+| Nombre                                                           | MCU      | Radio     |     WiFi     | BT  |  GPS      |
+| :--------------------------------------------------------------- | :------- | :-----    | :----------: | :-: | :----:    |
+| [RAK4631](./rak-wireless/wisblock/core-module?rakcore=RAK4631)   | nRF52840 | SX1262    |      NO      | 5.0 | ADICIONAL |
+| [RAK11200](./rak-wireless/wisblock/core-module?rakcore=RAK11200) | ESP32    | ADICIONAL | 2.4GHz b/g/n | 4.2 | ADICIONAL |
+| [RAK11310](./rak-wireless/wisblock/core-module?rakcore=RAK11310) | RP2040   | SX1262    |      NO      | NO  | ADICIONAL |
+
+[**Placas Base**](./rak-wireless/wisblock/base-board/)
+
+| Nombre                                                             | Tipo                                     |
+| ------------------------------------------------------------------ | ---------------------------------------- |
+| [RAK5005-O](./rak-wireless/wisblock/base-board?rakbase=RAK5005-O) | WisBlock Base Board (Fin de vida útil).   |
+| [RAK19007](./rak-wireless/wisblock/base-board?rakbase=RAK19007)   | WisBlock Base Board (2da Generación)      |
+| [RAK19003](./rak-wireless/wisblock/base-board?rakbase=RAK19003)   | WisBlock Mini Base Board.                 |
+| [RAK19001](./rak-wireless/wisblock/base-board?rakbase=RAK19001)   | WisBlock Dual IO Base Board.              |
+
+[**Periféricos WisBlock**](./rak-wireless/wisblock/peripherals/)
+
+| Nombre                                                                            | Tipo                            |
+| --------------------------------------------------------------------------------- | ------------------------------- |
+| [RAK1910](./rak-wireless/wisblock/peripherals?rakmodules=GPS)                     | GPS                             |
+| [RAK12500](./rak-wireless/wisblock/peripherals?rakmodules=GPS)                    | GPS                             |
+| [RAK18001](./rak-wireless/wisblock/peripherals?rakmodules=Buzzer)                 | Buzzer                          |
+| [RAK13002](./rak-wireless/wisblock/peripherals?rakmodules=IO)                     | Módulo IO                       |
+| RAK14001                                                                          | LED RGB                         |
+| [RAK12002](./rak-wireless/wisblock/peripherals?rakmodules=RTC)                    | Reloj de tiempo real            |
+| [RAK1901](./rak-wireless/wisblock/peripherals?rakmodules=Sensors&sensors=RAK1901) | Sensor de temperatura y humedad |
+| [RAK1902](./rak-wireless/wisblock/peripherals?rakmodules=Sensors&sensors=RAK1902) | Sensor de presión barométrica   |
+| [RAK1906](./rak-wireless/wisblock/peripherals?rakmodules=Sensors&sensors=RAK1906) | Sensor de ambiente              |
+| RAK12013                                                                          | Sensor de radar                 |
+| RAK13800                                                                          | Módulo Ethernet                 |
+
+[**Pantallas WisBlock**](./rak-wireless/wisblock/screens/)
+
+| Nombre                                                       | Tipo                         | Resolución |
+| ------------------------------------------------------------ | ---------------------------- | ---------- |
+| [RAK1921](./rak-wireless/wisblock/screens?rakscreens=OLED)   | 0.96 pulgadas OLED           | 128x64px   |
+| [RAK14000](./rak-wireless/wisblock/screens?rakscreens=E-Ink) | 2.13 pulgadas pantalla E-Ink | 212x104px  |
+
+### [WisMesh](./rak-wireless/wismesh/)
+
+| Nombre                                                                                    | MCU      | Radio  | WiFi | BT  |  GPS      |
+| :---------------------------------------------------------------------------------------- | :------- | :----- | :--: | :-: | :-------: |
+| [WisMesh Pocket V2](./rak-wireless/wismesh/pocket/?pocket=pocketv2)                       | nRF52840 | SX1262 |  NO  | 5.0 | SI        |
+| [WisMesh Pocket Mini](./rak-wireless/wismesh/pocket/?pocket=pocket-mini)                  | nRF52840 | SX1262 |  NO  | 5.0 | NO        |
+| [WisMesh TAP](./rak-wireless/wismesh/tap.mdx)                                             | nRF52840 | SX1262 |  NO  | 5.0 | SI        |
+| [WisMesh Board ONE](./rak-wireless/wismesh/board-one.mdx)                                 | nRF52840 | SX1262 |  NO  | 5.0 | ADICIONAL |
+| [WisMesh Repeater](./rak-wireless/wismesh/repeater/?repeater=repeater)                    | nRF52840 | SX1262 |  NO  | 5.0 | ADICIONAL |
+| [WisMesh Repeater Mini](./rak-wireless/wismesh/repeater/?repeater=repeater-mini)          | nRF52840 | SX1262 |  NO  | 5.0 | ADICIONAL |
+| [WisMesh Ethernet MQTT Gateway](./rak-wireless/wismesh/gateway/?gateway=gateway-ethernet) | nRF52840 | SX1262 |  NO  | 5.0 | ADICIONAL |
+| [WisMesh WiFi MQTT Gateway](./rak-wireless/wismesh/gateway/?gateway=gateway-wifi)         | ESP32    | SX1262 |  SI  | 5.0 | ADICIONAL |
+
+## LILYGO®
+
+### [T-Beam](./lilygo/tbeam/)
+
+Placas completas con GPS, soporte para batería 18650 y pantalla opcional.
+
+| Nombre                                          | MCU      | Radio             |     WiFi     | BT  | GPS |
+| :---------------------------------------------- | :------- | :---------------- | :----------: | :-: | :-: |
+| [T-Beam v0.7](./lilygo/tbeam/?t-beam=0.7)       | ESP32    | SX1276            | 2.4GHz b/g/n | 4.2 | SI |
+| [T-Beam v1.1](./lilygo/tbeam/?t-beam=1.1)       | ESP32    | SX1276            | 2.4GHz b/g/n | 4.2 | SI |
+| [T-Beam with M8N](./lilygo/tbeam/?t-beam=m8n)   | ESP32    | SX1276<br/>SX1262 | 2.4GHz b/g/n | 4.2 | SI |
+| [T-Beam S3-Core](./lilygo/tbeam/?t-beam=s3core) | ESP32-S3 | SX1262            | 2.4GHz b/g/n | 5.0 | SI |
+| [T-BeamSUPREME](./lilygo/tbeam/?t-beam=supreme) | ESP32-S3 | SX1262            | 2.4GHz b/g/n | 5.0 | SI |
+
+### [T-Echo](./lilygo/techo/)
+
+Unidad todo en uno con pantalla E-Ink, GPS y batería en una carcasa moldeada por inyección. Cuenta con el nRF52840 de bajo consumo para una larga duración de la batería.
+
+| Nombre                    | MCU      | Radio  | WiFi | BT  | GPS |
+| :------------------------ | :------- | :----- | :--: | :-: | :-: |
+| [T-Echo](./lilygo/techo/) | nRF52840 | SX1262 |  NO  | 5.0 | SI  |
+
+### [LoRa](./lilygo/lora/)
+
+Placas básicas y económicas basadas en ESP32.
+
+| Nombre                                            | MCU      | Radio                                   |     WiFi     | BT  | GPS |
+| :------------------------------------------------ | :------- | :-------------------------------------- | :----------: | :-: | :-: |
+| [LoRa32 V1](./lilygo/lora/?t-lora=v1)             | ESP32    | SX127x                                  | 2.4GHz b/g/n | 4.2 | NO  |
+| [LoRa32 V1.3](./lilygo/lora/?t-lora=v1.3)         | ESP32    | SX127x                                  | 2.4GHz b/g/n | 4.2 | NO  |
+| [LoRa32 V2.0](./lilygo/lora/?t-lora=v2.0)         | ESP32    | SX127x                                  | 2.4GHz b/g/n | 4.2 | NO  |
+| [LoRa32 V2.1-1.6](./lilygo/lora/?t-lora=v2.1)     | ESP32    | SX127x                                  | 2.4GHz b/g/n | 4.2 | NO  |
+| [LoRa32 V2.1-1.8](./lilygo/lora/?t-lora=v2.1-1.8) | ESP32    | SX1280                                  | 2.4GHz b/g/n | 4.2 | NO  |
+| [LoRa32 V3.0](./lilygo/lora/?t-lora=v3.0)         | ESP32    | SX127x                                  | 2.4GHz b/g/n | 4.2 | NO  |
+| [LoRa32 T3-S3 V1.0](./lilygo/lora/?t-lora=S3-v1)  | ESP32-S3 | SX1262<br/>SX1276<br/>SX1280<br/>LR1121 | 2.4GHz b/g/n | 5.0 | NO  |
+
+### [T-Deck](./lilygo/tdeck/)
+
+Dispositivo independiente con pantalla y teclado.
+
+| Nombre                    | MCU         | Radio  | WiFi | BT  | GPS |
+| :------------------------ | :---------- | :----- | :--: | :-: | :-: |
+| [T-Deck](./lilygo/tdeck/) | ESP32-S3FN8 | SX1262 | SI   | 5.0 | NO  |
+
+### [T-Watch S3](./lilygo/twatch/)
+
+| Nombre                         | MCU      | Radio  | WiFi | BT  | GPS |
+| :----------------------------- | :------- | :----- | :--: | :-: | :-: |
+| [T-Watch S3](./lilygo/twatch/) | ESP32-S3 | SX1262 | SI   | 5.0 | NO  |
+
+### [T-Lora C6](./lilygo/tlorac6/)
+
+| Nombre                         | MCU      | Radio  | WiFi |  BT   | GPS |
+| :----------------------------- | :------- | :----- | :--: | :---: | :-: |
+| [T-Lora C6](./lilygo/tlorac6/) | ESP32-C6 | SX1262 | SI   | 5.0\* | NO  |
+
+\* La compatibilidad con Bluetooth en los módulos ESP32-C6 aún no está disponible en el firmware de Meshtastic.
+
+## HELTEC®
+
+### [LoRa 32](./heltec-automation/lora32/)
+
+Placas básicas y económicas basadas en ESP32.
+
+| Nombre                                                                              | MCU         | Radio  |     WiFi     | BT  | GPS |
+| :---------------------------------------------------------------------------------- | :---------- | :----- | :----------: | :-: | :-: |
+| [LoRa32 V3/3.1](./heltec-automation/lora32/?heltec=v3)                              | ESP32-S3FN8 | SX1262 | 2.4GHz b/g/n | 5.0 | NO  |
+| [Wireless Stick Lite V3](./heltec-automation/lora32/?heltec=Wireless+Stick+Lite+V3) | ESP32-S3FN8 | SX1262 | 2.4GHz b/g/n | 5.0 | NO  |
+| [Wireless Tracker v1.0](./heltec-automation/lora32/?heltec=tracker-v1.0)            | ESP32-S3FN8 | SX1262 | 2.4GHz b/g/n | 5.0 | SI  |
+| [Wireless Tracker v1.1](./heltec-automation/lora32/?heltec=tracker-v1.1)            | ESP32-S3FN8 | SX1262 | 2.4GHz b/g/n | 5.0 | SI  |
+| [Wireless Paper v1.0](./heltec-automation/lora32/?heltec=paper-v1.0)                | ESP32-S3FN8 | SX1262 | 2.4GHz b/g/n | 5.0 | NO  |
+| [Wireless Paper v1.1](./heltec-automation/lora32/?heltec=paper-v1.1)                | ESP32-S3FN8 | SX1262 | 2.4GHz b/g/n | 5.0 | NO  |
+
+### [Plug & Play Sensors](./heltec-automation/sensor/)
+
+| Nombre                                    | MCU         | Radio  | WiFi         | BT  | GPS |
+| ----------------------------------------- | ----------- | ------ | ------------ | --- | --- |
+| [Capsule V3](./heltec-automation/sensor/) | ESP32-S3FN8 | SX1262 | 2.4GHz b/g/n | 5.0 | SI  |
+
+### [Vision Master](./heltec-automation/vision-master/)
+
+Placas de desarrollo basadas en ESP32-S3 con pantalla E-Ink.
+
+| Name                                                                               | MCU        | Radio  |     WiFi     | BT  | GPS |
+| :--------------------------------------------------------------------------------- | :--------- | :----- | :----------: | :-: | :-: |
+| [Vision Master E213](./heltec-automation/vision-master/?heltec=vision_master_e213) | ESP32-S3R8 | SX1262 | 2.4GHz b/g/n | 5.0 | NO  |
+| [Vision Master E290](./heltec-automation/vision-master/?heltec=vision_master_e290) | ESP32-S3R8 | SX1262 | 2.4GHz b/g/n | 5.0 | NO  |
+| [Vision Master T190](./heltec-automation/vision-master/?heltec=vision_master_t190) | ESP32-S3R8 | SX1262 | 2.4GHz b/g/n | 5.0 | NO  |
+
+### [Mesh Node](./heltec-automation/mesh-node)
+
+| Nombre                                                          | MCU      | Radio  | WiFi | BT  |   GPS    |
+| --------------------------------------------------------------- | :------- | :----- | :--- | :-: | :------: |
+| [Mesh Node T114](./heltec-automation/mesh-node/?mesh_node_t114) | nRF52840 | SX1262 | NO   | 5.0 | OPCIONAL |
+
+## Seeed Studio
+
+### SenseCap
+
+La línea de productos SenseCAP ofrece una gama completa de soluciones tanto para aficionados como para usuarios industriales, incluyendo el rastreador de tarjetas T1000-E, un dispositivo Meshtastic listo para usar con clasificación IP65, y el Indicador con pantalla táctil de 4 pulgadas impulsado por ESP32-S3 y RP2040 Dual-MCU.
+| Nombre                                                        | MCU           | Radio  |     WiFi     | BT  | GPS      |
+| ------------------------------------------------------------- | ------------- | ------ | ------------ | --- | -------- |
+| [Card Tracker T1000-E](./seeed-studio/sensecap/card-tracker/) | nRF52840      | LR1110 | NO           | 5.1 | SI       |
+| [SenseCAP Indicator](./seeed-studio/sensecap/indicator/)      | ESP32, RP2040 | SX1262 | 2.4GHz b/g/n | 5.0 | OPCIONAL |
+
+### [XIAO & Wio-SX1262 Series](./seeed-studio/wio-sx1262)
+
+La serie de kits de desarrollo Seeed XIAO + SX1262 ofrece dispositivos compactos con múltiples opciones de MCU, y muchos GPIOs para conectar sensores u otro hardware.
+
+| Nombre                                                                          | MCU           | Radio      |     WiFi     | BT  |   GPS    |
+| :------------------------------------------------------------------------------ | :------------ | :--------- | :----------: | :-: | :------: |
+| [XIAO ESP32-S3 & Wio-SX1262 Kit](./seeed-studio/wio-sx1262?wio-sx1262=esp32-s3) | XIAO ESP32-S3 | Wio-SX1262 | 2.4GHz b/g/n | 5.0 | OPCIONAL |
+| [XIAO nRF52840 & Wio-SX1262 Kit](./seeed-studio/wio-sx1262?wio-sx1262=nrf52840) | XIAO nRF52840 | Wio-SX1262 |      NO      | 5.0 | OPCIONAL |
+
+### [Seeed Wio-WM1110](./seeed-studio/wm1110)
+
+Placas de desarrollo basadas en el chip nRF52840 con GPS, y múltiples puertos para conectar sensores.
+
+| Nombre                                                                    | MCU      | Radio  | WiFi | BT  | GPS |
+| :------------------------------------------------------------------------ | :------- | :----- | :--: | :-: | :-: |
+| [Seeed Wio-WM1110 Dev Kit](./seeed-studio/wm1110?wm1110=wio-sdk-wm1110)   | nRF52840 | LR1110 | SI   | 5.3 | SI  |
+| [Seeed Wio Tracker 1110](./seeed-studio/wm1110?wm1110=wio-tracker-wm1110) | nRF52840 | LR1110 | SI   | 5.3 | SI  |
+
+## [Raspberry Pi](./raspberrypi/)
+
+### [Raspberry Pi Pico](./raspberrypi/pico/)
+
+Placas rápidas y versátiles que utilizan el RP2040.
+
+| Nombre                                  | MCU    | Radio  |     WiFi     |      BT       | GPS |
+| :-------------------------------------- | :----- | :----- | :----------: | :-----------: | :-: |
+| [Raspberry Pi Pico](./raspberrypi/pico) | RP2040 | SX1262 | 2.4GHz b/g/n | No soportado  | NO  |
+
+[**Periféricos Pico**](./raspberrypi/pico/peripherals/)<br/>
+SSD1306 Pantalla OLED<br/>
+SH1106 Pantalla OLED<br/>
+Teclado CardKB
+
+### [Raspberry Pi Zero/Zero2/3/4/400/5](./linux-native-hardware/)
+
+Meshtastic ofrece soporte para dispositivos Raspberry Pi a través de nuestra plataforma nativa de Linux, meshtasticd. Para obtener información completa, consulte nuestra documentación sobre [Hardware Nativo de Linux](./linux-native-hardware/).
