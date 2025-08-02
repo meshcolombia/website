@@ -50,9 +50,14 @@ export default defineConfig({
       },
       social: [
         {
-          icon: "telegram",
+          icon: "phone",
           label: "WhatsApp",
           href: "https://chat.whatsapp.com/Bkw5MiV8RqVL6GRutNyZNS?mode=ac_c",
+        },
+        {
+          icon: "telegram",
+          label: "Telegram",
+          href: "https://t.me/meshtasticco",
         },
         {
           icon: "github",
