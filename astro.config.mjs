@@ -116,8 +116,8 @@ export default defineConfig({
             {
               label: "Dispositivos",
               autogenerate: { directory: "dispositivos" },
-            }
-          ]
+            },
+          ],
         },
         {
           label: "Guías",
@@ -132,9 +132,23 @@ export default defineConfig({
               attrs: { target: "_blank", rel: "noopener nofollow" },
             },
             {
-              label: "Mapa de Nodos",
+              label: "Mapa de Nodos (Global)",
               link: "https://meshmap.net",
               attrs: { target: "_blank", rel: "noopener nofollow" },
+            },
+            {
+              label: "Mapa de Nodos (Colombia)",
+              link: "https://mapa.meshcolombia.co",
+              attrs: { target: "_blank", rel: "noopener nofollow" },
+            },
+            {
+              label: "Estadísticas de la red (Colombia)",
+              link: "https://meshview.meshcolombia.co",
+              attrs: { target: "_blank", rel: "noopener nofollow" },
+            },
+            {
+              label: "Libros",
+              slug: "recursos/libros",
             },
           ],
         },

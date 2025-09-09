@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+
+const { title, image, details, downloadLink } = Astro.props;
+---
+
+<article class="book-item">
+  <header>
+    <h3>{title}</h3>
+  </header>
+  <div class="book-content">
+    <Image src={image} alt={`Portada de ${title}`} height={300} width={200} />
+    <div class="book-details">
+      <p><strong>Autor:</strong> {details.author}</p>
+      <p><strong>Año:</strong> {details.year}</p>
+      <p><strong>ISBN:</strong> {details.isbn}</p>
+      <p><strong>Páginas:</strong> {details.pages}</p>
+      <p><strong>Idioma:</strong> {details.language}</p>
+      <a
+        href={downloadLink || "#"}
+        target="_blank"
+        rel="noopener noreferrer nofollow">Descargar</a
+      >
+    </div>
+  </div>
+</article>
+
+<style>
+  .book-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .book-content {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+  }
+  .book-details {
+    margin: 0;
+  }
+  .book-details p {
+    margin: 0.25rem 0;
+  }
+  .book-details a {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+</style>
