@@ -1,0 +1,54 @@
+---
+title: Elección de nombres para nodos
+description: Recomendaciones y herramientas para elegir nombres únicos y significativos para los nodos en las red Meshtastic de Colombia
+sidebar:
+  label: Nombres para nodos
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Elegir nombres adecuados para los nodos en una red Meshtastic es crucial para facilitar la identificación y gestión de los dispositivos. A continuación, se presentan algunas recomendaciones y herramientas para ayudarte a seleccionar nombres únicos y significativos para tus nodos.
+
+## Nombre largo (Long name)
+
+El nombre largo es una descripción más detallada del nodo. Esta es una estructura recomendada para el nombre largo:
+
+Estructura: `<CC><N><AAA>-<T> <CITY>`
+
+Ejemplo: `CO1ABC-1 Bogotá`
+
+| Elemento | Descripción | Ejemplo |
+| -------- | ----------- | ------- |
+| `CC`     | Código de país (2 letras) | CO |
+| `N`      | Número del nodo (1 dígito) | 1 |
+| `AAA`    | Libre elección (3 letras) | ABC |
+| `T`      | Tipo de nodo (1 dígito) | 1 (repetidor) |
+| `CITY`   | Nombre de la ciudad o ubicación (opcional) | Bogotá |
+
+#### Tipos de nodos (`T`)
+
+| Letra | Descripción       |
+|-------|-------------------|
+| 0     | Casa              |
+| 1     | Repetidor         |
+| 2     | Router            |
+| 3     | Móvil             |
+| 4     | Vehículo / Moto / Bicicleta |
+| 5     | Gateway MQTT      |
+| 6     | Sensor            |
+| 9     | Otro              |
+
+<Aside type="note" title="Nota">
+Si eres radioaficionado, puedes bajo tu propio criterio y responsabilidad usar tu indicativo de radio. Por ejemplo: `HK1ABC-1`.
+</Aside>
+
+## Nombre corto (Short name)
+
+El nombre corto es una versión abreviada del nombre largo, ideal para pantallas pequeñas o interfaces limitadas. Esta es una estructura recomendada para el nombre corto:
+
+Estructura: `<AAA><T>`
+
+Ejemplo: `ABC1`
+
+---
+(*) Recomendaciones basadas en las sugerencias de *Carlos Rivera ([VA3CRL](http://qrz.com/db/VA3CRL))*.
